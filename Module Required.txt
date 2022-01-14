@@ -1,0 +1,16 @@
+he way to install it is to go to its directory in the cmd and type pip install PyAudio-0.2.11-cp37-cp37m-win32.whl
+
+
+pip install SpeechRecognition
+pip install pyaudio
+import speech_recognition as sr
+r= sr.Recognizer()
+
+with sr.Microphone() as source:
+	print("Say something")
+	audio=r.listen(source)
+
+try:
+	print("You said",r.recognize_google(audio)
+except:
+	print("Unable to recgnize the audio")
